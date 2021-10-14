@@ -1,0 +1,7 @@
+{
+  "name": "boton_panico",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
