@@ -1,0 +1,60 @@
+<ion-header>
+  <app-header></app-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button mode="md"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="padding-left: 0;">
+      <div class="contenedorTitulo">
+        <div>BOTON DE PANICO</div>
+        <div id="divImg"><img class="logo" src="../../assets/logo-para-pie-web.png" alt=""></div>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<app-loading [ngStyle]="{'display': !cargando ? 'none' : 'block'}"></app-loading>
+<ion-content class="login">
+  <h5 class="titulo">INGRESO DE USUARIO</h5>
+  <form [formGroup]="form">
+    <div class="imagen-login"></div>
+    <ion-grid [ngStyle]="{'top': (keyboardVisible ? 0 : 'unset')}" class="inputs ion-padding" fixed="true">
+      <ion-row class="ion-padding-vertical">
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Numero de Telefono</ion-label>
+            <ion-input type="number" pattern="\d*" formControlName="usuario">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-grid class="ion-no-margin ion-no-padding" fixed="true">
+              <ion-row class="ion-align-items-center">
+                <ion-col class="ion-no-padding">
+                  <ion-label position="floating">DNI</ion-label>
+                  <ion-input type="number" pattern="\d*" style="--padding-end: 40px;" clearOnEdit="false" formControlName="password"
+                    >
+                  </ion-input>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-justify-content-center ion-padding-vertical" style="margin-top: 10vw;">
+        <ion-col size="6">
+          <ion-button class="boton" type="button" (click)="refresh()" [disabled]="!form.valid">
+            <img style="max-width: 100%;    width: 60px !important;" src="../../assets/cancelar.png" alt="">
+          </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-button class="boton" type="button" (click)="submit()" [disabled]="!form.valid">
+            <img style="max-width: 100%;width: 60px !important;"  src="../../assets/ok-marca.png" alt="">
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

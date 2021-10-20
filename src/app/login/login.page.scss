@@ -1,0 +1,184 @@
+ion-header {
+  .toolbar {
+    --background: #d32823;
+    color: white;
+  }
+
+  img.logo {
+    width: 100px;
+  }
+  .logo{
+    float: right;
+  }
+  .contenedorTitulo{
+    display: flex;
+    align-items: center;
+    padding-left: 3vw;
+  }
+  #divImg{
+    display: flex;
+    text-align: end;
+    width: 100%;
+    justify-content: end;
+  }
+}
+
+.primerIngreso {
+  background: white;
+  z-index: 5;
+  padding: 20px;
+  height: 100vh;
+  color: #787C7C;
+  font-family: 'Montserrat-Regular';
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  h3 {
+    font-family: 'Montserrat-SemiBold';
+  }
+
+  .boton {
+    min-width: 70%;    
+    font-family: "Montserrat-Bold";
+    --border-radius: 10px;
+    --padding-top: 25px;
+    --padding-bottom: 25px;
+    margin: 0 auto;
+    font-size: 16px;
+  }
+
+}
+
+ion-content {
+  h5.titulo {
+    text-align: center;
+    color: #A9ABA7;
+    font-family: 'Montserrat-SemiBold';
+    font-size: 14px;
+    margin-top: 16vw;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    ion-grid {
+      ion-item {
+        --border-color: rgba(255, 255, 255, 0);
+        --highlight-color-invalid: rgba(111, 0, 255, 0);
+        --highlight-color-valid: rgba(128, 109, 0, 0);
+
+        ion-label {
+          color: #787C7C;
+          font-family: 'Montserrat-Regular';
+        }
+
+        ion-input {
+          border-bottom: 1px solid #A9ABA7;
+          border-radius: 0;
+        }
+      }
+
+      .boton {
+        text-decoration: none;
+        width: 100%;
+        --background: #f7f7f700;
+        font-family: 'Montserrat-Bold';
+        --border-radius: 10px;
+        --padding-top:5px;
+        --padding-bottom: 5px;
+        font-size: 50px;
+        height: auto;
+        --box-shadow: 0px 0px 0px 0px !important;
+      }
+
+      ion-button img {
+        width: 20px;
+      }
+
+      .boton_transparente {
+        --background: #D9D8D6 !important;
+        --border-color: white;
+        --border-width: 1px;
+        --border-style: solid;
+        --box-shadow: none;
+        font-size: 15px !important;
+        font-family: 'Montserrat-Regular' !important;
+        text-transform: none;
+        --padding-top: 10px;
+        --padding-bottom: 10px;
+        color: #d32823;
+        text-align: center;
+        height: auto;
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          .texto-remarcado {
+            font-family: 'Montserrat-Black' !important;
+          }
+        }
+      }
+
+      .recuperarContraseña {
+        text-align: end;
+        color: #d32823;
+        font-family: 'Montserrat-Regular';
+        font-size: 14px;
+      }
+
+    }
+  }
+
+  .modal_recuperar_usuario {
+    position: absolute;
+    top: 0;
+    // top: 15vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .fondo_modal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #00000057;
+      z-index: 9;
+    }
+
+    .modal_logout {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 8px;
+      flex-direction: column;
+      padding: 13px;
+      z-index: 50;
+      max-width: 90vw;
+      text-align: center;
+      box-shadow: 0 0 10px -4px #848484;
+      color: #454545;
+
+      .boton_blanco {
+        text-decoration: none;
+        font-size: 22px;
+        margin: 9px 0;
+        color: #d32823;
+        border: 2px solid;
+        padding: 5px 10px;
+        border-radius: 6px;
+      }
+    }
+  }
+
+}

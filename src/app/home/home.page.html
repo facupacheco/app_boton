@@ -1,0 +1,29 @@
+<ion-header>
+  <app-header></app-header>
+  <ion-toolbar class="toolbar">    
+    <ion-title style="padding-left: 0;">
+      <div class="contenedorTitulo">
+        <div>BOTON DE PANICO</div>
+        <div id="divImg"><ion-menu-button></ion-menu-button></div>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="login">
+  <h5 class="titulo">SISTEMA DE SOS</h5>
+  <div style="margin-top: 8vw;" class="valores">
+    <div class="botones">     
+      <div class="boton" (click)="alertaSOS()">
+        <img id="logoAlerta" style="max-width: 60%;
+        box-shadow: 2px 8px 16px grey;
+        border-radius: 50%;" src="../../assets/boton-de-alarma.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="botonesLlamados">              
+        <a style="display: flex; justify-content: center;"  href=""><img style="max-width: 40%;"  src="../../assets/llamadaCortar.png" alt=""></a>          
+        <a style="display: flex; justify-content: center;" href="tel:911"><img style="max-width: 40%;" src="../../assets/llamada-telefonica.png" alt=""></a>         
+  </div>
+</ion-content>
+
