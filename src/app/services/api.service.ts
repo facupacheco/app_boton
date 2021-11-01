@@ -45,64 +45,7 @@ export class ApiService implements OnDestroy {
     ).toPromise();
   }
 
-  getHomeInfo(model) {
-    return this._postAction(model, "getHomeInfo");
-  }
-  getAdjudicados(model) {
-    return this._postAction(model, "getAdjudicados");
-  }
-  getAdjudicadoInfo(model) {
-    return this._postAction(model, "getAdjudicadoInfo");
-  }
-  getContacto(model) {
-    return this._postAction(model, "getContacto");
-  }
-  registro(model) {
-    return this._postAction(model, "createUserApp");
-  }
-  getAgencias(model) {
-    return this._postAction(model, "getAgencias");
-  }
-  getProvincias(model) {
-    return this._postAction(model, "getProvincias");
-  }
-  getLocalidades(model) {
-    return this._postAction(model, "getLocalidades");
-  }
-  validarUsuario(model) {
-    return this._postAction(model, "validateUser");
-  }
-  getMisDatos(model) {
-    return this._postAction(model, "getMisDatos");
-  }
-  getPlanes(model) {
-    return this._postAction(model, "getPlanes");
-  }
-  getNotificaciones(model) {
-    return this._postAction(model, "getNotificaciones");
-  }
-  getCuotas(model) {
-    return this._postAction(model, "getCuotas");
-  }
-  recuperarPassword(model) {
-    return this._postAction(model, "recuperarPassword");
-  }
-  validarRecuperarPassword(model) {
-    return this._postAction(model, "validarRecuperarPassword");
-  }
-  terminarRecuperarPassword(model) {
-    return this._postAction(model, "terminarRecuperarPassword");
-  }
-  getLinkCuota(model) {
-    return this._postAction(model, "getLinkCuota");
-  }
-  setTokenFCM(model) {
-    return this._postAction(model, "setTokenFCM");
-  }
-  validatePasswordUser(model) {
-    return this._postAction(model, "validatePasswordUser");
-  }
-  setTelefonoSuscriptor(model) {
-    return this._postAction(model, "setTelefonoSuscriptor");
-  }
-}
+  // getProspectosAsignados(model) {
+  //   return this._postAction(model, "prospectosXUsuario");
+  // }
+} 

@@ -76,15 +76,15 @@ export class LoginPage implements OnInit {
   recuperarUsuario() {
     console.log('entro');
     
-    this._apiSv.getContacto({}).then((respuesta) => {
-      if (respuesta) {
-        console.log(respuesta);
-        this.datosContacto = respuesta;
+    // this._apiSv.getContacto({}).then((respuesta) => {
+    //   if (respuesta) {
+    //     console.log(respuesta);
+    //     this.datosContacto = respuesta;
         
-        this.modalRecuparUsuario = true;
-      }
-    }).catch(() => {
-    });
+    //     this.modalRecuparUsuario = true;
+    //   }
+    // }).catch(() => {
+    // });
   }
 
   goTo(page) {

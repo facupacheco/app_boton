@@ -43,6 +43,13 @@ export class AlertasPage implements OnInit {
 
   ngOnInit() {
     this.cargando = true;
+    // this._apiSv.getProspectosAsignados({idUser: 2}).then((respuesta) => {
+    //   if (respuesta) {
+    //     console.log(respuesta);
+    //     this.datosContacto = respuesta;
+    //    }
+    // }).catch(() => {
+    // });
     setTimeout(() => {
       this.cargando = false;
     }, 100);

@@ -10,6 +10,7 @@ import { GlobalsService } from './globals.service';
 import { tap, catchError } from 'rxjs/operators';
 import { Platform } from '@ionic/angular';
 import { AlertService } from './alert.service';
+import { FirebaseAnalytics } from '@ionic-native/firebase-analytics';
 // import { PushService } from './push.service';
 
 @Injectable({
@@ -27,7 +28,7 @@ export class AuthService {
     private _globalsSv: GlobalsService,
     private _platform: Platform,
     private _alertSv: AlertService,
-    // private _pushSv: PushService,
+    // private _pushSv: PushService, 
   ) { }
 
   canActivate(
@@ -60,7 +61,6 @@ export class AuthService {
       })
     ).toPromise();
   }
-
   setTokenUserData(token, userData) {
     console.log(this._platform);
     localStorage.setItem('token2', token);

@@ -6,6 +6,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { GlobalsService } from 'src/app/services/globals.service';
 import { Subscription } from 'rxjs';
 import { ApiService } from '../services/api.service';
+import { FirebaseAnalytics, FirebaseAnalyticsOriginal } from '@ionic-native/firebase-analytics';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class HomePage implements OnInit {
 
   badge: number = 0;
   private _notificacionesSbs: Subscription;
-
+  private firebaseAnalytics: FirebaseAnalyticsOriginal;
   constructor(
     private _authSv: AuthService,
     private _navCtrl: NavController,
@@ -37,8 +38,7 @@ export class HomePage implements OnInit {
     private _platform: Platform,
     private _changeDetectorRef: ChangeDetectorRef,
     private _apiSv: ApiService
-  ) {
-   
+  ) {     
   }
 
   ngOnInit() {
@@ -57,6 +57,16 @@ export class HomePage implements OnInit {
       });
     });
   }
+
+  public ionViewDidEnter()
+{
+  this.firebaseAnalytics.setEnabled(true); 
+  this.firebaseAnalytics.logEvent('home_page_viewed', {page: 'dashboard'})
+    .then((res: any) => console.log(res))
+    .catch((error: any) => console.error(error));
+   
+}
+
   alertaSOS(){
     var imagen=document.getElementById('logoAlerta');
     imagen.setAttribute('src','../../assets/boton-de-alarma-Recuperado.png');

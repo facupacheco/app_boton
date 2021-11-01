@@ -8,7 +8,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GlobalsService {
-  readonly API_URL = 'http://192.168.0.27/publicidades_web/index.php?r=webService/'; 
-
+  readonly API_URL = 'http://192.168.0.31/Autocredito_ModuloTelefonico/public/api/'; 
   constructor() { }
 }
