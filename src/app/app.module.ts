@@ -5,6 +5,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FirebaseX } from '@ionic-native/firebase-x/ngx';
 
 // import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -22,7 +23,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     IonicModule.forRoot({
       scrollAssist: false,
       scrollPadding: false
@@ -36,6 +37,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
   ],
   providers: [
     // AppVersion,
+    FirebaseX,
  
     {
       provide: RouteReuseStrategy,

@@ -39,13 +39,13 @@ export class ApiService implements OnDestroy {
   }
 
   private _postAction(model, action_name) {
-    return this._http.post(
+    return this._http.get(
       this._globalsSv.API_URL + action_name,
       model
     ).toPromise();
   }
 
-  // getProspectosAsignados(model) {
-  //   return this._postAction(model, "prospectosXUsuario");
-  // }
+  getAlertas(model) {
+    return this._postAction(model, "getAlertas");
+  }
 } 

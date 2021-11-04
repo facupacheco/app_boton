@@ -14,6 +14,30 @@
 </ion-header>
 <ion-content class="login">
   <h5 class="titulo">GRILLA DE ALERTAS</h5>
- 
+
+  <ion-grid>
+    <ion-row class="fila" >
+      <ion-col class="columnaTitulo">
+        ID
+      </ion-col>
+      <ion-col class="columnaTitulo">
+        Fecha  
+      </ion-col>
+      <ion-col class="columnaTitulo">
+        Estado  
+      </ion-col>
+    </ion-row>
+    <ion-row class="fila" *ngFor="let item of prospectos?.data">
+      <ion-col class="columna">
+        {{item?.idAlerta}} 
+      </ion-col>
+      <ion-col class="columna">
+        {{item?.AlertaFechaDesde}} 
+      </ion-col>
+      <ion-col class="columna">
+        {{item?.descripcion}} 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
 

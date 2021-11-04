@@ -1,5 +1,5 @@
 {
-  "name": "boton_panico",
+  "name": "panico_boton",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -26,6 +26,7 @@
     "@capacitor/status-bar": "1.0.3",
     "@ionic-native/core": "^5.36.0",
     "@ionic-native/firebase-analytics": "^5.36.0",
+    "@ionic-native/firebase-x": "^5.36.0",
     "@ionic/angular": "^5.5.2",
     "jetifier": "^2.0.0",
     "rxjs": "~6.6.0",
@@ -50,11 +51,10 @@
     "@typescript-eslint/eslint-plugin": "4.16.1",
     "@typescript-eslint/parser": "4.16.1",
     "cordova-android": "^9.1.0",
-    "cordova-annotated-plugin-android": "^1.0.4",
-    "cordova-play-services-version-adapter": "^1.1.0",
     "cordova-plugin-androidx": "^3.0.0",
     "cordova-plugin-androidx-adapter": "^1.1.3",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-firebasex": "^13.0.1",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.2.1",
     "cordova-plugin-splashscreen": "^5.0.2",
@@ -89,7 +89,8 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-androidx": {},
-      "cordova-plugin-androidx-adapter": {}
+      "cordova-plugin-androidx-adapter": {},
+      "cordova-plugin-firebasex": {}
     },
     "platforms": [
       "android"

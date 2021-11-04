@@ -6,6 +6,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { GlobalsService } from 'src/app/services/globals.service';
 import { Subscription } from 'rxjs';
 import { ApiService } from '../services/api.service';
+import { FirebaseX } from '@ionic-native/firebase-x/ngx';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class AlertasPage implements OnInit {
   keyboardVisible: boolean = false;
   primerIngreso: boolean = true;
   modalRecuparUsuario: boolean = false;
-  datosContacto: any;
+  prospectos: any;
 
   badge: number = 0;
   private _notificacionesSbs: Subscription;
@@ -36,26 +37,33 @@ export class AlertasPage implements OnInit {
     private _globalSv: GlobalsService,
     private _platform: Platform,
     private _changeDetectorRef: ChangeDetectorRef,
-    private _apiSv: ApiService
+    private _apiSv: ApiService,
+    private _firebase: FirebaseX
   ) {
    
   }
 
   ngOnInit() {
+    
     this.cargando = true;
-    // this._apiSv.getProspectosAsignados({idUser: 2}).then((respuesta) => {
-    //   if (respuesta) {
-    //     console.log(respuesta);
-    //     this.datosContacto = respuesta;
-    //    }
-    // }).catch(() => {
-    // });
+    this._apiSv.getAlertas({idUser: 2}).then((respuesta: any) => {
+      if (respuesta) {
+        console.log(respuesta);
+        this.prospectos = respuesta;
+       }
+    }).catch(() => {
+    });
+    console.log(this.prospectos);
     setTimeout(() => {
       this.cargando = false;
     }, 100);
   }
   
-
+  public ionViewDidEnter()
+{
+  this._firebase.setScreenName("Alertas");
+  this._firebase.logEvent("screen_view",{content_type:"alertas",item_id:"alertas"});
+}
 
   goTo(page) {
     this._navCtrl.navigateForward(page);
