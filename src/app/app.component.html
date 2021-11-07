@@ -18,6 +18,8 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+        Configurar IP
+        <input type="tel"  [(ngModel)]="ip"> <button (click)="setIP()">OK</button>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

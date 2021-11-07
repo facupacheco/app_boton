@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FirebaseX } from '@ionic-native/firebase-x/ngx';
+import { FormsModule } from '@angular/forms';
+
 
 // import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -30,6 +32,8 @@ import { FirebaseX } from '@ionic-native/firebase-x/ngx';
     }),
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
+    
     
     
     // BrowserAnimationsModule,
@@ -38,7 +42,6 @@ import { FirebaseX } from '@ionic-native/firebase-x/ngx';
   providers: [
     // AppVersion,
     FirebaseX,
- 
     {
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy

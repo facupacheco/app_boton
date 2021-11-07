@@ -70,9 +70,12 @@ export class HomePage implements OnInit {
   alertaSOS(){
     var imagen=document.getElementById('logoAlerta');
     imagen.setAttribute('src','../../assets/boton-de-alarma-Recuperado.png');
+    
     setTimeout(() => {
-      imagen.setAttribute('src','../../assets/boton-de-alarma.png');
-      this._alertSv.presentOk('Alerta Enviada Correctamente');
+      this._apiSv.enviarAlerta({idUser: 2}).then(() => {
+        imagen.setAttribute('src','../../assets/boton-de-alarma.png');
+        this._alertSv.presentOk('Alerta Enviada Correctamente');
+      });
     }, 3000);
     this._alertSv.presentWarning('Enviando Alerta');
   }

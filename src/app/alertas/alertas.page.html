@@ -17,9 +17,9 @@
 
   <ion-grid>
     <ion-row class="fila" >
-      <ion-col class="columnaTitulo">
+      <!-- <ion-col class="columnaTitulo">
         ID
-      </ion-col>
+      </ion-col> -->
       <ion-col class="columnaTitulo">
         Fecha  
       </ion-col>
@@ -28,14 +28,14 @@
       </ion-col>
     </ion-row>
     <ion-row class="fila" *ngFor="let item of prospectos?.data">
-      <ion-col class="columna">
+      <!-- <ion-col class="columna">
         {{item?.idAlerta}} 
-      </ion-col>
+      </ion-col> -->
       <ion-col class="columna">
         {{item?.AlertaFechaDesde}} 
       </ion-col>
       <ion-col class="columna">
-        {{item?.descripcion}} 
+        {{item?.Descripcion}} 
       </ion-col>
     </ion-row>
   </ion-grid>

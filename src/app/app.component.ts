@@ -1,18 +1,24 @@
 import { Component } from '@angular/core';
+import { AlertService } from './services/alert.service';
+import { GlobalsService } from './services/globals.service';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  ip:string;
   public appPages = [
     { title: 'Home', url: 'home', icon: 'home' },
     { title: 'Alertas', url: 'alertas', icon: 'archive' },
-    // { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    // { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    // { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    // { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
   ];
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor(private global:  GlobalsService,private _alertSv: AlertService,
+  ) {}
+
+  public setIP(){
+    localStorage.setItem('IP',this.ip);
+    this.global.setIP(this.ip);    
+    this._alertSv.presentWarning('Ip Actualizada. IR a HOME');
+  }
 }

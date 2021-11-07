@@ -48,12 +48,10 @@ export class AlertasPage implements OnInit {
     this.cargando = true;
     this._apiSv.getAlertas({idUser: 2}).then((respuesta: any) => {
       if (respuesta) {
-        console.log(respuesta);
         this.prospectos = respuesta;
        }
     }).catch(() => {
     });
-    console.log(this.prospectos);
     setTimeout(() => {
       this.cargando = false;
     }, 100);

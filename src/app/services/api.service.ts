@@ -47,5 +47,8 @@ export class ApiService implements OnDestroy {
 
   getAlertas(model) {
     return this._postAction(model, "getAlertas");
+  } 
+  enviarAlerta(model) {
+    return this._postAction(model, "setAlertas");
   }
 } 
